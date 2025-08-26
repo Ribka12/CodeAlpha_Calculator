@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculator</title>
+  <link rel="stylesheet" href="src/css/style.css" />
+  <link rel="shortcut icon" href="./src/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Main area content-->
+  <main class="stage" role="application" aria-label="Calculator">
+    <!-- Calculator -->
+    <div class="calculator-container">
+      <div class="display">
+        <div id="expression" class="expression" title="Expression">0</div>
+        <div id="result" class="result" title="Live result">&nbsp;</div>
+      </div>
+
+      <div class="buttons">
+        <button class="btn danger" data-action="clear" aria-label="Clear (Esc)">AC</button>
+        <button class="btn danger" data-action="backspace" aria-label="Delete (Backspace)">DEL</button>
+        <button class="btn operator" data-value="(" aria-label="Open parenthesis">(</button>
+        <button class="btn operator" data-value=")" aria-label="Close parenthesis">)</button>
+
+        <button class="btn" data-value="7">7</button>
+        <button class="btn" data-value="8">8</button>
+        <button class="btn" data-value="9">9</button>
+        <button class="btn operator" data-value="÷" aria-label="Divide">÷</button>
+
+        <button class="btn" data-value="4">4</button>
+        <button class="btn" data-value="5">5</button>
+        <button class="btn" data-value="6">6</button>
+        <button class="btn operator" data-value="×" aria-label="Multiply">×</button>
+
+        <button class="btn" data-value="1">1</button>
+        <button class="btn" data-value="2">2</button>
+        <button class="btn" data-value="3">3</button>
+        <button class="btn operator" data-value="−" aria-label="Subtract">−</button>
+
+        <button class="btn span-2" data-value="0">0</button>
+        <button class="btn" data-value=".">.</button>
+        <button class="btn operator" data-value="+">+</button>
+
+        <button class="btn equals span-2" data-action="equals" aria-label="Equals (Enter)">=</button>
+        <button class="btn accent span-2" data-action="copy" aria-label="Copy result (C)">Copy</button>
+      </div>
+    </div>
+
+    <!-- Hanging badge with shortcuts -->
+    <aside class="badge" aria-label="Keyboard Shortcuts">
+      <h3>⌨️ Keyboard Shortcuts</h3>
+      <ul>
+        <li><b>Numbers &amp; Ops:</b> 0–9, +, −, ×, ÷, ( ) .</li>
+        <li><b>Enter / =</b> → Calculate</li>
+        <li><b>Backspace</b> → Delete last</li>
+        <li><b>Esc</b> → Clear all</li>
+        <li><b>C</b> → Copy result</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="site-footer">© 2025 All rights reserved</footer>
+
+  <script src="src/js/calculator.js"></script>
+</body>
+</html>
